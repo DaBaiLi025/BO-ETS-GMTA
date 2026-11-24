@@ -1,0 +1,15 @@
+{
+  "release_status": "code/configuration only; no research data or prediction outputs",
+  "primary_protocol": "P1_HISTORICAL_PARITY_v1",
+  "audited_original_core_sha256": "ea76934a67b737487fd4bb88cf1f6c6d0b0c91840bf94cd7063865bae33aa01c",
+  "release_core_change": "Optional model_class hook in fit_gmta permits variant classes; default GMTA class behavior is unchanged.",
+  "included": ["P1 model and selected configurations", "P1 runner", "analysis utilities", "PatchTST upstream source and license"],
+  "excluded": ["throughput observations", "all origin-level forecasts", "metric tables", "bootstrap result tables", "checkpoints", "manuscripts and reviewer correspondence"],
+  "known_replay_limits": [
+    "Historical GMTA checkpoints, complete scaler vectors, and RNG states were not retained; a new run is not a bitwise replay.",
+    "P1 internal chronological 80:20 early-stopping split is not horizon-purged.",
+    "Data-release vintages were not independently reconstructed; temporal boundaries use nominal observation months.",
+    "2023-2025 and January-August 2026 outcomes were examined during development; neither is a blind prospective test.",
+    "The PatchTST source and selected configuration are provided, but the historical search/final orchestration is not a one-command workflow in this code-only package."
+  ]
+}
